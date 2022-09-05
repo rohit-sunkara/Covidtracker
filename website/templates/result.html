@@ -1,0 +1,29 @@
+<div id="result" class="modal bottom-sheet">
+    <div class="modal-content">
+        <div style="display: flex; justify-content: space-between;">
+            <h3 class="header">Our Prediction</h3>
+            <button class="btn-floating modal-close waves-effect waves-light right red"><i
+                    class="material-icons">close</i></button>
+        </div>
+        <div class="center" id="input" style="width: 60%; margin: 0 auto; font-size: 20px; display: flex; justify-content: space-between;">
+        </div>
+        <table class="centered responsive-table">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ message.location }}</td>
+                    <td>{{ message.date }}</td>
+                    <td>{{ message.total_cases }}</td>
+                    <td>{{ message.total_deaths }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

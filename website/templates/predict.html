@@ -1,0 +1,29 @@
+<form class="col s12" method="POST" action="{{ url_for('views.index') }}">
+    <div class="row valign-wrapper">
+        <div class="col s12 m6 l4">
+            <label for="location" class="btn-large waves-effect waves-light indigo">Location</label>
+        </div>
+        <div class="col s12 m6 l8 valign-wrapper">
+            <select id="location" name="location">
+                <option value="" disabled selected>Choose location</option>
+                {% for location in locations %}
+                <option value="{{ location }}">{{ location }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="row valign-wrapper">
+        <div class="col s12 m6 l4">
+            <label for="date" class="btn-large waves-effect waves-light indigo">Date</label>
+        </div>
+        <div class="col s12 m6 l8 valign-wrapper">
+            <input type="text" id="date" name="date" class="datepicker">
+        </div>
+    </div>
+    <div class="row center-align" style="margin-bottom: 0;">
+        <div class="col s12">
+            <button class="btn-large waves-effect waves-light green modal-trigger" data-target="result" type="submit"
+                style="width: auto;">Get prediction</button>
+        </div>
+    </div>
+</form>

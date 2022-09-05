@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body > div {
+    height: calc(100% - 64px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg {
+    background-image: url('./home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input {
+    margin: 0px !important;
+}
+
+div .btn-large {
+    width: 100%;
+    font-weight: 500;
+}
+
+.select-wrapper {
+    width: 100%;
+}
+
+.select-dropdown {
+    max-height: 250px;
+}

@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Cases Predictor</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body class="row" style="margin-bottom: 0;">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Covid Cases Predictor</a>
+        </div>
+    </nav>
+    <div class="col s12 m6 hide-on-small-only" id="bg"></div>
+    <div class="col s12 m6">
+        {% include 'predict.html' %}
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+    {% if message %}
+    {% include 'result.html' %}
+    <script>
+        $(document).ready(function () {
+            $('.modal#result').modal('open');
+        });
+    </script>
+    {% endif %}
+</body>
+
+</html>
